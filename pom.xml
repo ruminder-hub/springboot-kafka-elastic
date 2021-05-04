@@ -4,6 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<modules>
 		<module>twitter-kafka</module>
+        <module>kafka</module>
+		<module>kafka-model</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
