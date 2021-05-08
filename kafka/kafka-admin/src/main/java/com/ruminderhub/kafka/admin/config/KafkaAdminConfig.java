@@ -1,4 +1,4 @@
-package com.ruminderhub.kafka_admin.config;
+package com.ruminderhub.kafka.admin.config;
 
 
 import com.ruminderhub.twitter_kafka.config.KafkaConfigData;

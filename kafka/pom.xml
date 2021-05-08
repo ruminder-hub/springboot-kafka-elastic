@@ -10,15 +10,5 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>kafka</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>kafka-model</module>
-        <module>kafka-admin</module>
-        <module>kafka-producer</module>
-    </modules>
-
-    <properties>
-        <maven.compiler.release>11</maven.compiler.release>
-    </properties>
 
 </project>

@@ -1,4 +1,4 @@
-{"namespace": "com.ruminderhub.kafaka.avro.model",
+{"namespace": "com.ruminderhub.kafka.avro.model",
  "type": "record",
  "name": "TwitterAvroModel",
  "fields": [

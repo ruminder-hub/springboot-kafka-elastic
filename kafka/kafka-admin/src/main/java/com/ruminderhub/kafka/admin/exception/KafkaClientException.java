@@ -1,4 +1,4 @@
-package com.ruminderhub.kafka_admin.exception;
+package com.ruminderhub.kafka.admin.exception;
 
 public class KafkaClientException extends RuntimeException{
 

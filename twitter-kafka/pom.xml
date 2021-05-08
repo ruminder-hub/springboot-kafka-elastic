@@ -37,6 +37,14 @@
             <groupId>com.ruminderhub</groupId>
             <artifactId>app-data-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.ruminderhub</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ruminderhub</groupId>
+            <artifactId>kafka-model</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

@@ -1,4 +1,4 @@
-package com.ruminderhub.kafka_producer.config;
+package com.ruminderhub.kafka.producer.config;
 
 import com.fasterxml.jackson.databind.ser.std.StringSerializer;
 import com.ruminderhub.twitter_kafka.config.KafkaConfigData;

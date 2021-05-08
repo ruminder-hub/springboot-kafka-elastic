@@ -1,4 +1,4 @@
-package com.ruminderhub.kafka_admin.client;
+package com.ruminderhub.kafka.admin.client;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.ruminderhub.kafka_admin.service;
+package com.ruminderhub.kafka.admin.service;
 
 import org.apache.kafka.clients.admin.TopicListing;
 

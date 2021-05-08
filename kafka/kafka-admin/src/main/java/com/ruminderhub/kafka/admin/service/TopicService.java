@@ -1,6 +1,8 @@
-package com.ruminderhub.kafka_admin.service;
+package com.ruminderhub.kafka.admin.service;
 
-import com.ruminderhub.kafka_admin.exception.KafkaClientException;
+import com.ruminderhub.kafka.admin.client.KafkaAdminClient;
+import com.ruminderhub.kafka.admin.client.KafkaAdminClient;
+import com.ruminderhub.kafka.admin.exception.KafkaClientException;
 import com.ruminderhub.twitter_kafka.config.KafkaConfigData;
 import com.ruminderhub.twitter_kafka.config.RetryConfigData;
 import org.apache.kafka.clients.admin.AdminClient;
@@ -36,6 +38,8 @@ public class TopicService implements ITopicService{
     private RetryConfigData retryConfigData;
     @Autowired
     private WebClient webClient;
+    @Autowired
+    private KafkaAdminClient kafkaAdminClient;
 
     private final Logger log = LoggerFactory.getLogger(KafkaConfigData.class);
 

@@ -5,6 +5,9 @@
 	<modules>
 		<module>twitter-kafka</module>
         <module>kafka</module>
+		<module>kafka/kafka-model</module>
+		<module>kafka/kafka-admin</module>
+		<module>kafka/kafka-producer</module>
 		<module>app-data-config</module>
 		<module>common-config</module>
 	</modules>
@@ -47,7 +50,22 @@
 			<dependency>
 				<groupId>com.ruminderhub</groupId>
 				<artifactId>common-config</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ruminderhub</groupId>
+				<artifactId>kafka-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ruminderhub</groupId>
+				<artifactId>kafka-admin</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ruminderhub</groupId>
+				<artifactId>kafka-producer</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>

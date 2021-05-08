@@ -1,7 +1,6 @@
-package com.ruminderhub.kafka_producer.service;
+package com.ruminderhub.kafka.producer.service;
 
 import com.ruminderhub.kafaka.avro.model.TwitterAvroModel;
-import org.apache.avro.specific.SpecificRecordBase;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +12,6 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 import javax.annotation.PreDestroy;
-import java.io.Serializable;
 
 @Service
 public class TwitterKafkaProducer implements IKafkaProducer<Long, TwitterAvroModel>{
