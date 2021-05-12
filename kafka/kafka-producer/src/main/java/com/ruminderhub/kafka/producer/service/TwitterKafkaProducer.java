@@ -1,6 +1,6 @@
 package com.ruminderhub.kafka.producer.service;
 
-import com.ruminderhub.kafaka.avro.model.TwitterAvroModel;
+import com.ruminderhub.kafka.avro.model.TwitterAvroModel;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,21 +23,25 @@ public class TwitterKafkaProducer implements IKafkaProducer<Long, TwitterAvroMod
     @Override
     public void send(String topicName, Long key, TwitterAvroModel message) {
         log.info("Sending message={} with key={} to topic={}", message, key, topicName);
-        ListenableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture = kafkaTemplate.send(topicName, key, message);
-        kafkaResultFuture.addCallback(new ListenableFutureCallback<SendResult<Long, TwitterAvroModel>>() {
-            @Override
-            public void onFailure(Throwable throwable) {
-                log.info("Failed to send message {} to kafka", message, throwable);
-            }
+        try {
+            ListenableFuture<SendResult<Long, TwitterAvroModel>> kafkaResultFuture = kafkaTemplate.send(topicName, key, message);
+            kafkaResultFuture.addCallback(new ListenableFutureCallback<>() {
+                @Override
+                public void onFailure(Throwable throwable) {
+                    log.info("Failed to send message {} to kafka", message, throwable);
+                }
 
-            @Override
-            public void onSuccess(SendResult<Long, TwitterAvroModel> longTwitterAvroModelSendResult) {
-                RecordMetadata metadata = longTwitterAvroModelSendResult.getRecordMetadata();
-                log.info("Successfully sent message to Kafka with metadata, Topic: {}, Partition {}, Offset {}, Timestamp {}, time {}",
-                        metadata.topic(), metadata.partition(), metadata.offset(), metadata.timestamp(), System.nanoTime());
+                @Override
+                public void onSuccess(SendResult<Long, TwitterAvroModel> longTwitterAvroModelSendResult) {
+                    RecordMetadata metadata = longTwitterAvroModelSendResult.getRecordMetadata();
+                    log.info("Successfully sent message to Kafka with metadata, Topic: {}, Partition {}, Offset {}, Timestamp {}, time {}",
+                            metadata.topic(), metadata.partition(), metadata.offset(), metadata.timestamp(), System.nanoTime());
 
-            }
-        });
+                }
+            });
+        } catch (Exception e) {
+            log.info("Error occured while sending message to Kafka {}", e);
+        }
     }
 
     @PreDestroy

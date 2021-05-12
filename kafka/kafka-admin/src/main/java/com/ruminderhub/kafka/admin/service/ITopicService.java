@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public interface ITopicService {
 
-    Boolean checkSchemaReqisrtry();
+    Boolean checkSchemaReqistry();
     void createTopicWithRetry();
     boolean checkIfTopicExists(String topic);
     void checkIfTopicListCreated();

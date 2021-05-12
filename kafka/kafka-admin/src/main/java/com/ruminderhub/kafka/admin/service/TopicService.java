@@ -72,7 +72,7 @@ public class TopicService implements ITopicService{
     }
 
     @Override
-    public Boolean checkSchemaReqisrtry() {
+    public Boolean checkSchemaReqistry() {
         int retryCount = 1;
         Integer maxAttempts = retryConfigData.getMaxAttempts();
         Integer multiplier = retryConfigData.getMultiplier();

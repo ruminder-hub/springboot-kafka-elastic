@@ -23,7 +23,7 @@ public class KafkaStreamInitializer implements IStreamInitializer{
     @Override
     public void init() {
         topicService.createTopicWithRetry();
-        topicService.checkSchemaReqisrtry();
+        topicService.checkSchemaReqistry();
         log.info("Topics with name {} have been created ", kafkaAdminClient.getKafkaConfigData().getTopicNamesToCreate());
 
     }
