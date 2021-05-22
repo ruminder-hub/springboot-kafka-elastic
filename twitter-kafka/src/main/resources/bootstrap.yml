@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: twitter-kafka
+  profiles:
+    active: twitter-kafka
+  cloud:
+    config:
+      name: twitter-kafka-config
+      uri: http://localhost:8888
