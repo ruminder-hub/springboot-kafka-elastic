@@ -8,3 +8,9 @@ spring:
           uri: https://github.com/ruminder-hub/springboot-kafka-elastic-config-repo
           clone-on-start: true
     fail-fast: true
+  security:
+    user:
+      name: ruminderhub
+      password: ruminderhubpass
+encrypt:
+  key: springboot-kafka-elastic
