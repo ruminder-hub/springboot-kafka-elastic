@@ -7,3 +7,9 @@ spring:
     config:
       name: twitter-kafka, config-client
       uri: http://localhost:8888
+      default-label: main
+      clone-on-start: true
+      username: ruminderhub
+      password: '{cipher}506879990e7029b763fe89602b3685ecf12a0a138fe880581a001faf7553c8e5'
+encrypt:
+  key: springboot-kafka-elastic

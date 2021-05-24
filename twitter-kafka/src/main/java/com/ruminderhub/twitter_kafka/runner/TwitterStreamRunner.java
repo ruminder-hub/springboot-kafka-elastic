@@ -41,7 +41,7 @@ public class TwitterStreamRunner implements IStreamRunner{
     }
 
     private void filterTwitterStream() {
-        String []keywords = twitterKafkaDataConfig.getTwitterKeywords().toArray(new String[]{});
+        String []keywords = twitterKafkaDataConfig.getTwitterKeywords().toArray(new String[0]);
         FilterQuery query = new FilterQuery(keywords);
         twitterStream.filter(query);
         log.info("Started filtering twitter stream for keywords {}", keywords);
